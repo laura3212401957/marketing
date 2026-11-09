@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ZYNTRA — Explora el Multiverso</title>
+    <meta name="description"
+        content="ZYNTRA: explora personajes, episodios y dimensiones. Suscríbete y abre tu portal.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;700&family=Space+Mono&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="imagenes/zyntra-logo.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <canvas id="estrellas"></canvas>
+    <div class="aura a1"></div>
+    <div class="aura a2"></div>
+    <canvas id="confeti"></canvas>
+
+    <header>
+        <nav>
+            <a class="logo" href="#">ZYNTRA</a>
+            <a class="nav-cta" href="#suscribirse">Abrir portal</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero" id="suscribirse">
+            <div>
+                <div class="etiqueta mono">// TRANSMISIÓN ABIERTA · DIMENSIÓN C-137</div>
+                <h1>Explora el<br><span class="tipeo" id="tipeo"></span><span class="cursor"></span></h1>
+                <p class="sub">Personajes, episodios y dimensiones en una sola aplicación móvil. Suscríbete y sé de
+                    los primeros en cruzar el portal.</p>
+
+                <div class="form-wrap">
+                    <form id="formulario" novalidate>
+                        <div class="campo">
+                            <input type="email" id="email" name="email" placeholder="tu@correo.com"
+                                autocomplete="email" aria-label="Correo electrónico" required>
+                        </div>
+                        <button type="submit" id="boton">
+                            <span class="txt">Entrar al multiverso →</span>
+                            <span class="spinner"></span>
+                        </button>
+                    </form>
+                    <p class="mensaje" id="mensaje">Tu correo electrónico es el pasaporte interdimensional.</p>
+                    <p class="nota-demo mono" id="notaDemo"></p>
+
+                    <div class="exito" id="exito" role="status">
+                        <h2>¡Portal abierto! 🟢</h2>
+                        <p>Te enviamos un correo de bienvenida a <b id="emailOk"></b>. Si no aparece, revisa spam: a
+                            veces las dimensiones se cruzan.</p>
+                        <span class="mono">COORDENADAS GUARDADAS · ID <span id="idExplorador"></span></span>
+                    </div>
+                </div>
+
+                <div class="stats">
+                    <div class="stat"><b id="contador">0</b><span>EXPLORADORES YA DENTRO</span></div>
+                    <div class="stat"><b data-n="826">0</b><span>PERSONAJES</span></div>
+                    <div class="stat"><b data-n="51">0</b><span>EPISODIOS</span></div>
+                </div>
+            </div>
+
+            <div class="portal-zona">
+                <div class="portal" id="portal">
+                    <div class="anillo r1"></div>
+                    <div class="anillo r2"></div>
+                    <div class="anillo r3"></div>
+                    <div class="anillo r4"></div>
+                    <div class="nucleo"></div>
+                    <div class="orbita">
+                        <div class="chip c1"><span>👽 Personajes</span></div>
+                        <div class="chip c2"><span>📺 Episodios</span></div>
+                        <div class="chip c3"><span>🌌 Dimensiones</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="marquesina" aria-hidden="true">
+            <div class="pista" id="pista"></div>
+        </div>
+
+        <section>
+            <div class="titulo-sec rev">
+                <h2>Tres formas de perderte (a propósito)</h2>
+                <p>Todo lo que vas a poder explorar en ZYNTRA.</p>
+            </div>
+            <div class="grid">
+                <article class="tarjeta rev">
+                    <div class="ico">👽</div>
+                    <h3>Personajes</h3>
+                    <p>Busca, filtra y descubre a cada habitante del multiverso con su origen, especie y estado.</p>
+                    <span class="id mono">// SECTOR_01</span>
+                </article>
+                <article class="tarjeta rev">
+                    <div class="ico">📺</div>
+                    <h3>Episodios</h3>
+                    <p>Recorre temporadas y episodios, y mira qué personajes aparecen en cada uno.</p>
+                    <span class="id mono">// SECTOR_02</span>
+                </article>
+                <article class="tarjeta rev">
+                    <div class="ico">🌌</div>
+                    <h3>Dimensiones</h3>
+                    <p>Salta entre ubicaciones y realidades alternas. Sin pasaporte, solo curiosidad.</p>
+                    <span class="id mono">// SECTOR_03</span>
+                </article>
+            </div>
+        </section>
+
+        <section class="cta-final rev">
+            <h2 style="font-size:clamp(1.8rem,4vw,2.8rem)">Tu viaje empieza aquí</h2>
+            <p style="color:var(--lavender);margin-top:8px">Mantente conectado al multiverso.</p>
+            <a class="big" href="#suscribirse"
+                onclick="setTimeout(()=>document.getElementById('email').focus(),600)">Suscribirme ahora</a>
+        </section>
+    </main>
+
+    <footer>
+        <p class="mono">ZYNTRA © 2026 · Proyecto conceptual · No es una aplicación oficial de Rick and
+            Morty.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
